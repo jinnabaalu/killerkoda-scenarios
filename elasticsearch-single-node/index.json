@@ -1,11 +1,11 @@
 {
   "title": "Running Elasticsearch as a container with Kibana",
-  "description": "Elasticsearch Single Node Container not recom",
+  "description": "Elasticsearch single is recommended for dev and monitoring but not for the production or primary store. ",
   "difficulty": "beginner",
-  "time": "2 minutes",
+  "time": "5 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - Run Command",
+      "title": "Step 1 - ",
       "text": "step1.md"
     }],
     "intro": {
@@ -17,10 +17,10 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "uilayout": "Docker",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Docker using `docker`\u001b[m\r\n"
   },
   "backend": {
-    "imageid": "bash"
+    "imageid": "docker"
   }
 }
