@@ -1,5 +1,42 @@
-# Running Elasticsearch as a container
+# Step 1 - Create Docker-compose
 
-This is an _example_ of creating a scenario and running a **command**
+Create the `docker-compose.yml` with the following
 
-`echo 'Hello World'`{{execute}}
+```bash
+cat <<EOF >>docker-compose.yml
+version: "3.7"
+services:
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.7.0
+        container_name: elasticsearch
+        environment:
+            discovery.type: single-node
+            ES_JAVA_OPTS: "-Xms512m -Xmx1024m"
+        volumes:
+            - vibhuviesdata:/usr/share/elasticsearch/data
+        ports:
+            - 9200:9200
+        networks:
+            - elastic
+    kibana:
+        image: docker.elastic.co/kibana/kibana:7.7.0
+        container_name: kibana
+        ports:
+            - 5601:5601
+        depends_on:
+            - elasticsearch
+        environment:
+            ELASTICSEARCH_URL: http://elasticsearch:9200
+            ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+        networks:
+            - elastic
+networks:
+    elastic:
+      driver: bridge  
+volumes:
+    vibhuviesdata:
+      driver: local
+EOF
+```
+
+check with the 

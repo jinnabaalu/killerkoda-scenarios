@@ -17,10 +17,11 @@
     }
   },
   "environment": {
-    "uilayout": "Docker",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Docker using `docker`\u001b[m\r\n"
-  },
-  "backend": {
-    "imageid": "docker"
-  }
+    "hideintro": true, "hidefinish": true,
+    "showvisualise": true,
+    "uilayout": "terminal"
+},
+"backend": {
+    "imageid": "ubuntu"
+}
 }
