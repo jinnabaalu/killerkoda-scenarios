@@ -3,11 +3,21 @@
   "description": "Elasticsearch single is recommended for dev and monitoring but not for the production or primary store. ",
   "difficulty": "beginner",
   "time": "5 minutes",
+  "assets": {
+    "client": [
+      {
+        "file": "docker-compose.yml",
+        "target": "~/"
+      }
+    ]
+  },
   "details": {
-    "steps": [{
-      "title": "Step 1 - ",
-      "text": "step1.md"
-    }],
+    "steps": [
+      {
+        "title": "Step 1 - ",
+        "text": "step1.md"
+      }
+    ],
     "intro": {
       "text": "intro.md",
       "credits": ""
@@ -17,11 +27,12 @@
     }
   },
   "environment": {
-    "hideintro": true, "hidefinish": true,
-    "showvisualise": true,
-    "uilayout": "terminal"
-},
-"backend": {
-    "imageid": "ubuntu"
-}
+    "showdashboard": true,
+    "dashboards": [{"name": "Tab Name", "port": 9200}, {"name": "Tab Name", "port": 9300}],
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
 }
