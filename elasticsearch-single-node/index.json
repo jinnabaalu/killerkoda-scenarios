@@ -14,7 +14,7 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - ",
+        "title": "Step1 - Create the docker-compose",
         "text": "step1.md"
       }
     ],

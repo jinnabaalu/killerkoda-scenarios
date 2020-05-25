@@ -37,6 +37,10 @@ volumes:
     vibhuviesdata:
       driver: local
 EOF
-```
+```{{execute}}
 
-check with the 
+Check the content of `docker-compose.yml` file 
+
+`cat /tmp/storageos-secret.yaml`{{execute}}
+
+

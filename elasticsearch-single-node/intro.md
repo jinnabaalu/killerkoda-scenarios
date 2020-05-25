@@ -1,4 +1,4 @@
-# ELasticsearch Single Node with Kibana
+# Elasticsearch Single Node with Kibana
 
 In this scenario, you'll learn how to deploy a Elasticsearch and Kibana as a Docker Container.
 
