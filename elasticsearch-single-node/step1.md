@@ -1,5 +1,3 @@
-# Step 1 - Create Docker-compose
-
 Create the `docker-compose.yml` with the following
 
 ```bash
