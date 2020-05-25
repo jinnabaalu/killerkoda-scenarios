@@ -1,5 +1,3 @@
-# Step 1 - Run the container
-
 ## Understand the properties used in Elasticsearch and Kibana
 
 As mentioned in the intro hope you are familiar with the docker container commands, expecting that we proceed with the environment we have configured for the elasticsearch. 
@@ -17,7 +15,7 @@ In the docker-compose we have defined two services `elasticsearch` and `kibana`.
 
 ### Kibana
 
-- `image: docker.elastic.co/kibana/kibana:7.7.0` - [Kibana Compatibility with Elasticsearch Matrix](https://www.elastic.co/support/matrix#matrix_compatibility)
+- `image: docker.elastic.co/kibana/kibana:7.7.0` - We have to use the same version as elasticsearch after `4.6.*`. Check the [Kibana Compatibility with Elasticsearch Matrix](https://www.elastic.co/support/matrix#matrix_compatibility)
 - `container_name` - Custom name of the container 
 - `environment` -  Kibana is connecting to the container elasticsearch with teh service name and port.
 - `ports` - Kibana will use port 9200 for visualising the elasticsearch
@@ -27,5 +25,11 @@ In the docker-compose we have defined two services `elasticsearch` and `kibana`.
 
 `docker-compose up -d`{{execute}}
 
+### Docker  Commands to check the status of the container
 
-"message": "Cluster health status changed from [YELLOW] to [GREEN]
+- Check the status of the container - `docker container ls`{{execute}} 
+- Check the logs of the container - `docker logs elasticsearch`{{execute}} and `docker logs kibana`{{execute}}
+- Output contains  
+    - Elasticsearch - `"message": "Cluster health status changed from [YELLOW] to [GREEN]`
+    - Kibana - `"message":"http server running at http://0:5601"`
+    This means that both containers are running successfully

@@ -2,7 +2,7 @@ Create the `docker-compose.yml` with the following
 
 ```
 cat <<EOF >>docker-compose.yml
-version: "3.7"
+version: "3"
 services:
     elasticsearch:
         image: docker.elastic.co/elasticsearch/elasticsearch:7.7.0
