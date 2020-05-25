@@ -25,11 +25,18 @@ In the docker-compose we have defined two services `elasticsearch` and `kibana`.
 
 `docker-compose up -d`{{execute}}
 
-### Docker  Commands to check the status of the container
+### Docker Commands
 
 - Check the status of the container - `docker container ls`{{execute}} 
-- Check the logs of the container - `docker logs elasticsearch`{{execute}} and `docker logs kibana`{{execute}}
+
+- Check the logs of the Elasticsearch - `docker logs elasticsearch`{{execute}}
+
+- Check the logs of the Kibana - `docker logs kibana`{{execute}}
+
 - Output contains  
+
     - Elasticsearch - `"message": "Cluster health status changed from [YELLOW] to [GREEN]`
+
     - Kibana - `"message":"http server running at http://0:5601"`
-    This means that both containers are running successfully
+
+This means that both containers are running successfully
