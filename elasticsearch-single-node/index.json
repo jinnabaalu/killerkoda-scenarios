@@ -22,7 +22,11 @@
         "text": "step2.md"
       },
       {
-        "title": "Step1 - Health Check - Interaction with Elasticsearch",
+        "title": "Step3 - Interaction with Elasticsearch Cluster API",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step4 - Create Index",
         "text": "step3.md"
       }
     ],

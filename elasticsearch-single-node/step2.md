@@ -1,5 +1,3 @@
-## Understand the properties used in Elasticsearch and Kibana
-
 As mentioned in the intro hope you are familiar with the docker container commands, expecting that we proceed with the environment we have configured for the elasticsearch. 
 
 In the docker-compose we have defined two services `elasticsearch` and `kibana`. Let's look at the other properties defined.
