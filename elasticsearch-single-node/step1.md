@@ -1,6 +1,6 @@
 Create the `docker-compose.yml` with the following
 
-```bash
+```
 cat <<EOF >>docker-compose.yml
 version: "3.7"
 services:
@@ -37,8 +37,10 @@ volumes:
 EOF
 ```{{execute}}
 
+
 Check the content of `docker-compose.yml` file 
 
-`cat /tmp/storageos-secret.yaml`{{execute}}
+
+`cat docker-compose.yml`{{execute}}
 
 

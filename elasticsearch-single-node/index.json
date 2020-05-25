@@ -16,6 +16,14 @@
       {
         "title": "Step1 - Create the docker-compose",
         "text": "step1.md"
+      },
+      {
+        "title": "Step2 - Understands the Environment and Run the container",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step1 - Create the docker-compose",
+        "text": "step1.md"
       }
     ],
     "intro": {
