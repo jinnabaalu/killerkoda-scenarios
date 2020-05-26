@@ -9,8 +9,8 @@ services:
         image: docker.elastic.co/elasticsearch/elasticsearch:7.7.0
         container_name: elasticsearch
         environment:
-            discovery.type: single-node
-            # ES_JAVA_OPTS: "-Xms256m -Xmx256m"
+            - discovery.type=single-node
+            - ES_JAVA_OPTS="-Xms256m -Xmx256m"
         volumes:
             - vibhuviesdata:/usr/share/elasticsearch/data
         ports:
