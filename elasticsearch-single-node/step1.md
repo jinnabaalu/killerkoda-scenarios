@@ -2,6 +2,7 @@ Create the `docker-compose.yml` with the following
 
 ```
 cat <<EOF >>docker-compose.yml
+
 version: "3"
 services:
     elasticsearch:
@@ -16,6 +17,9 @@ services:
             - 9200:9200
         networks:
             - elastic
+        labels:
+            - co.elastic.logs/module=elasticsearch
+            - co.elastic.metrics/module=elasticsearch
     kibana:
         image: docker.elastic.co/kibana/kibana:7.7.0
         container_name: kibana
@@ -34,6 +38,7 @@ networks:
 volumes:
     vibhuviesdata:
       driver: local
+
 EOF
 ```{{execute}}
 

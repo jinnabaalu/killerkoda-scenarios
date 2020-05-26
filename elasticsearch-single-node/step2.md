@@ -25,7 +25,7 @@ In the docker-compose we have defined two services `elasticsearch` and `kibana`.
 
 ### Docker Commands
 
-- Check the status of the container - `docker container ls`{{execute}} 
+- Check the status of the container - `docker container ls -a`{{execute}} 
 
 - Check the logs of the Elasticsearch - `docker logs elasticsearch`{{execute}}
 

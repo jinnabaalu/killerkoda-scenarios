@@ -12,7 +12,6 @@ Let us understand how we can start the single node container in this scenario, e
 
 - Create the docker-compose
 - Understand the properties used in Elasticsearch and Kibana
-- Run the container
 - Health check with 
     - Kibana Console UI 
     - `curl` Command 
