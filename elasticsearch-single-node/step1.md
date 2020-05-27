@@ -10,7 +10,7 @@ services:
         container_name: elasticsearch
         environment:
             - discovery.type=single-node
-            - ES_JAVA_OPTS="-Xms4g -Xmx4g"
+            - ES_JAVA_OPTS="-Xms1g -Xmx1g"
         volumes:
             - vibhuviesdata:/usr/share/elasticsearch/data
         ports:

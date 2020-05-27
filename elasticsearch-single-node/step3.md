@@ -16,6 +16,7 @@ We have two options to intearct with Elasticsearch `curl` and `Kibana Console UI
     `curl -X GET "localhost:9200/_cluster/stats"`
 
 - Cluster Settings API
+
     `curl -X GET "localhost:9200/_cluster/settings"`
 
 

@@ -1,0 +1,40 @@
+{
+  "title": "Dockerise Static Html Website",
+  "description": "Create a simple html page and deploy with nginx",
+  "difficulty": "beginner",
+  "time": "5 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Create html page and Dockerfile",
+      "text": "step1.md"
+    },{
+      "title": "Step 2 - What is Dockerfile?",
+      "text": "step2.md"
+    },{
+      "title": "Step 3 - What is docker-compose.yml?",
+      "text": "step3.md"
+    },{
+      "title": "Step 4 - Deploying the application?",
+      "text": "step4.md"
+    },{
+      "title": "Step 5 - Basic Commands for Docker Bigginers?",
+      "text": "step4.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Nginx", "port": 8080}],
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
