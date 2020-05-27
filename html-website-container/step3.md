@@ -1,9 +1,31 @@
-This is your first step.
+### Create docker-compose
 
-## Task
+Deploy or run any service as a container best practice is to create a set of services into one `.yml` file defining the desired behavior of the service. 
 
-This is an _example_ of creating a scenario and running a **command**
+Let's create `docker-compose.yml`
 
-`echo 'Hello World'`{{execute}}
+```
+car <<EFOR >>docker-compose.yml
+version: "3"
+services:
+  static-app:
+    image: vibhuvi-static
+    container_name: vibhuvi
+    ports:
+      - 8080:80
+EOF
+```{{execute}}
+
+In the above example 
+
+- We have defined single service
+- Image name used that we created in the previous step
+- We are trying to open the container port `80` on the host port `8080`, this mapping of ports will help us map to any available ports without conflicting with other containers. 
+
+### Run the application
+
+```docker-compose up -d```{{execute}}
+
+Now the application will be running on the server with the host port 8080. 
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
