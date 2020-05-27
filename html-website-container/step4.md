@@ -1,7 +1,14 @@
-This is your first step.
+These are the very basic and important commands used in the container life cycle.
 
-## Task
+- Check the containers running
 
-This is an _example_ of creating a scenario and running a **command**
+    ```docker ps```{{execute}}
 
-`echo 'Hello World'`{{execute}}
+- Check the containers existed and running both
+
+    ```docker ps -a```{{execute}}
+
+- Check the list of images 
+
+    ```docker images```{{execute}}
+
