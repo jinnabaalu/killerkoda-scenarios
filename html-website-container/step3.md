@@ -38,6 +38,10 @@ Let's try with an example,
 
 - Run the container with custom compose file `docker-compose -f vibhuvi.yml up -d`{{execute}}
 
+Now the application will be running on the server with the host port 8080. 
+
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+
 ### Run same aplication on multiple ports
 
 When we run multiple applications we may fall into the conflict situation where two applications may use same port. Docker provides freedom to set the HOST PORT as per our need.
