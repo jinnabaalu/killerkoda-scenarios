@@ -24,7 +24,7 @@ In the above example
 
 ### Run the application
 
-```docker-compose up -d```{{execute}}
+    `docker-compose up -d`{{execute}}
 
 Now the application will be running on the server with the host port 8080. 
 

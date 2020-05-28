@@ -21,6 +21,8 @@ These two layers will be triggered in the order, starts from the base image. Tri
 
 We use the `docker build` command to create a docker image for our static html application.
 
-    ```docker build -t vibhuvi-static .```{{execute}}
+    `docker build -t vibhuvi-static .`{{execute}}
 
-This will create a new image `vibhuvi-static:latest`
+This will create a new image `vibhuvi-static:latest`, check the docker images in the image cache.
+
+    `docker images`{{execute}}
