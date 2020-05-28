@@ -32,7 +32,7 @@ Here `docker-compose up -d` default file is docker-compose.yml, if the file name
 
 Let's try with an example, 
 
-- Stop the previously running container `docker-compose.yml down`{{execute}}
+- Stop the previously running container `docker-compose down`{{execute}}
 
 - Create the new compose file from the docker-compose.yml `mv docker-compose.yml vibhuvi.yml`{{execute}}
 

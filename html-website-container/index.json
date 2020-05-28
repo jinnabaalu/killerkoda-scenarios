@@ -1,6 +1,6 @@
 {
-  "title": "Dockerise Static Html Website",
-  "description": "Create a simple html page and deploy with nginx",
+  "title": "Containerisation for Beginners",
+  "description": "Create a simple html page and deploy with nginx and understand what is Containerisation",
   "difficulty": "beginner",
   "time": "5 minutes",
   "details": {
@@ -27,7 +27,7 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboards": [{"name": "Nginx", "port": 8080}],
+    "dashboards": [{"name": "Website", "port": 8080}],
     "uilayout": "terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
   },

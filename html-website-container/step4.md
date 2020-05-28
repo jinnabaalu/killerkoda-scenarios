@@ -8,10 +8,19 @@ These are the very basic and important commands used in the container life cycle
 
     `docker ps -a`{{execute}}
 
-- Check the list of images 
+- Check the logs of the container
 
-    `docker images`{{execute}}
+    `docker logs vibhuvi`{{execute}}
 
+- Inspect the the container
+
+    `docker inspect vibhuvi`{{execute}}
+
+- SSH into the container just like VM
+
+    `docker exec -it vibhuvi`{{execute}}
+
+> In the above command vibhuvi is the container name. We can also check with the container id using `docker logs <CONTAINER_ID>`. 
 
 
 Now the application will be running on the server with the host port 8080. 

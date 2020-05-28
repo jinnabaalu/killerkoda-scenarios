@@ -1,6 +1,4 @@
 
-## Create the Dockerfile
-
 We have many options to deploy HTML static pages, best practice is to create a Dockerfile for any application framework. So we'll create `Dockerfile` 
 
 ```
