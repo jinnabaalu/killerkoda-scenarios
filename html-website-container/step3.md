@@ -5,7 +5,7 @@ Deploy or run any service as a container best practice is to create a set of ser
 Let's create `docker-compose.yml`
 
 ```
-car <<EFOR >>docker-compose.yml
+car <<EOF >>docker-compose.yml
 version: "3"
 services:
   static-app:
