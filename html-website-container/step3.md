@@ -28,4 +28,4 @@ In the above example
 
 Now the application will be running on the server with the host port 8080. 
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com

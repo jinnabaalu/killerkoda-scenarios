@@ -29,7 +29,7 @@ EOF
 
 Check the content of the `index.html`
 
-    ```cat index.html```{{execute}}
+    `cat index.html`{{execute}}
 
 
 ## Create the Dockerfile
@@ -37,11 +37,11 @@ Check the content of the `index.html`
 We have many options to deploy HTML static pages, best practice is to create a Dockerfile for any application framework. So we'll create `Dockerfile` 
 
 ```
-cat <<EOF >>DOckerfile
+cat <<EOF >>Dockerfile
 FROM nginx:1.17.10
 COPY . /usr/share/nginx/html
 EOF
 ```{{execute}}
 
 Check the content of the Dockerfile
-    ```cat Dockerfile```{{execute}}
+    `cat Dockerfile`{{execute}}
