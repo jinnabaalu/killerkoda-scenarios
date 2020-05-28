@@ -1,8 +1,10 @@
 We create the static app with dockerfile just following the instructions below
 
-## Task Create the 
+## Task Create the ReactApp
 
-App
+```
+npx create-react-app my-app
+```
 
 ```
 cat <<EOF >> index.html
