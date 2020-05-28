@@ -1,0 +1,37 @@
+{
+  "title": "React App Containerisation",
+  "description": "Create the react app and containerise and deploy with docker-compose",
+  "difficulty": "beginner",
+  "time": "5-10 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Create the React App",
+      "text": "step1.md"
+    },{
+      "title": "Step 2 - What is Dockerfile?",
+      "text": "step2.md"
+    },{
+      "title": "Step 3 - What is docker-compose.yml? How to Deploy the application?",
+      "text": "step3.md"
+    },{
+      "title": "Step 4 - Basic Commands for Docker Bigginers?",
+      "text": "step4.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Website", "port": 8080}],
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
