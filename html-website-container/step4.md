@@ -58,7 +58,7 @@ These are the very basic and important commands used in the container life cycle
 
 - List Danlging Volumes
 
-    `docker volumes ls -f dangling=true`{{execute}}
+    `docker volume ls -q -f dangling=true`{{execute}}
 
 - Inspect Volumes 
 
