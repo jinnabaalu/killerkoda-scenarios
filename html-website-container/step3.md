@@ -5,7 +5,7 @@ Deploy or run any service as a container best practice is to create a set of ser
 Let's create `docker-compose.yml`
 
 ```
-car <<EOF >>docker-compose.yml
+cat <<EOF >>docker-compose.yml
 version: "3"
 services:
   static-app:
@@ -24,7 +24,7 @@ In the above example
 
 ### Run the application
 
-    `docker-compose up -d`{{execute}}
+We run the application using the docker-compose up `docker-compose up -d`{{execute}}
 
 Now the application will be running on the server with the host port 8080. 
 

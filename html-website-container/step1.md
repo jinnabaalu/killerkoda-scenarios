@@ -27,9 +27,7 @@ cat <<EOF >> index.html
 EOF
 ```{{execute}}
 
-Check the content of the `index.html`
-
-    `cat index.html`{{execute}}
+Check the content `cat index.html`{{execute}}
 
 
 ## Create the Dockerfile
