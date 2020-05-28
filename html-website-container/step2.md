@@ -1,3 +1,19 @@
+
+## Create the Dockerfile
+
+We have many options to deploy HTML static pages, best practice is to create a Dockerfile for any application framework. So we'll create `Dockerfile` 
+
+```
+cat <<EOF >>Dockerfile
+FROM nginx:1.17.10
+COPY . /usr/share/nginx/html
+EOF
+```{{execute}}
+
+Check the content of the Dockerfile
+    `cat Dockerfile`{{execute}}
+
+
 Dockerfile is the collection of instruction which describes the 
 
 - Environment of the application 
@@ -19,6 +35,9 @@ These two layers will be triggered in the order, starts from the base image. Tri
 
 ###  Create the docker image
 
-We use the `docker build` command to create a docker image for our static html application `docker build -t vibhuvi-static .`{{execute}}
+We use the `docker build` command to create a docker image for our static html application `docker build -t vibhuvi-static:latest .`{{execute}} 
+
+> -t is tag of the image, we can name the image as per our need, here I have created `vibhuvi-static:latest`. `vibhuvi-static` is the image name, `latest` is the tag
+
 
 This will create a new image `vibhuvi-static:latest`, check the docker images in the image cache. `docker images`{{execute}}

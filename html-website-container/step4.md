@@ -12,3 +12,8 @@ These are the very basic and important commands used in the container life cycle
 
     `docker images`{{execute}}
 
+
+
+Now the application will be running on the server with the host port 8080. 
+
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com

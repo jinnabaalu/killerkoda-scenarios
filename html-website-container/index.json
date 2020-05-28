@@ -11,13 +11,10 @@
       "title": "Step 2 - What is Dockerfile?",
       "text": "step2.md"
     },{
-      "title": "Step 3 - What is docker-compose.yml?",
+      "title": "Step 3 - What is docker-compose.yml? How to Deploy the application?",
       "text": "step3.md"
     },{
-      "title": "Step 4 - Deploying the application?",
-      "text": "step4.md"
-    },{
-      "title": "Step 5 - Basic Commands for Docker Bigginers?",
+      "title": "Step 4 - Basic Commands for Docker Bigginers?",
       "text": "step4.md"
     }],
     "intro": {
