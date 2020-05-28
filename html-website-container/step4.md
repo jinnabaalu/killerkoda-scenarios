@@ -66,7 +66,3 @@ These are the very basic and important commands used in the container life cycle
 
 > In the above command vibhuvi is the container name. We can also check with the container id using `docker logs <CONTAINER_ID>`. 
 
-
-Now the application will be running on the server with the host port 8080. 
-
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
