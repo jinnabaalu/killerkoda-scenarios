@@ -1,0 +1,40 @@
+{
+  "title": "Cassandra Single Node Container",
+  "description": "Deploy Cassandra Single Node Container",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Create docker compose configuration for cassandra single node",
+      "text": "step1.md"
+    },{
+      "title": "Step 2 - Persistance in cassandra and how to save the data in docker volumes",
+      "text": "step2.md"
+    },{
+      "title": "Step 3 - Connect to Cassandra Container  and run the commands",
+      "text": "step2.md"
+    },{
+      "title": "Step 4 - How to create a keyspace and a table and insert some data",
+      "text": "step3.md"
+    },{
+      "title": "Step 4 - Cleanup the machine",
+      "text": "step4.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Website", "port": 8080}],
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
