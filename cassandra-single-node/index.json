@@ -8,17 +8,17 @@
       "title": "Step 1 - Create docker compose configuration for cassandra single node",
       "text": "step1.md"
     },{
-      "title": "Step 2 - Persistance in cassandra and how to save the data in docker volumes",
+      "title": "Step 2 - Connect to Cassandra Container  and run the commands",
       "text": "step2.md"
     },{
-      "title": "Step 3 - Connect to Cassandra Container  and run the commands",
-      "text": "step2.md"
-    },{
-      "title": "Step 4 - How to create a keyspace and a table and insert some data",
+      "title": "Step 3 - Persistance in cassandra and how to save the data in docker volumes",
       "text": "step3.md"
     },{
-      "title": "Step 4 - Cleanup the machine",
+      "title": "Step 4 - How to create a keyspace and a table and insert some data",
       "text": "step4.md"
+    },{
+      "title": "Step 5 - Cleanup the machine",
+      "text": "step5.md"
     }],
     "intro": {
       "text": "intro.md",
