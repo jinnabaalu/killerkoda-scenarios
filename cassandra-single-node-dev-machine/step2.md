@@ -65,5 +65,5 @@ SELECT * FROM cycling.cyclist_category WHERE category = 'SPRINT';
 `{{execute}}
 - Pick the columns to display instead of choosing all data and limit
 `
-cqlsh> SELECT category, points, lastname FROM cycling.cyclist_category LIMIT 3;
+SELECT category, points, lastname FROM cycling.cyclist_category LIMIT 3;
 `{{execute}}
