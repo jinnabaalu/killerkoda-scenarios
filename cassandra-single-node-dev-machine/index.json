@@ -1,33 +1,29 @@
 {
   "title": "Dev Machine Cassandra Container ",
   "description": "Running cassandra on a single node container, to understand setting up cassandra container",
-  "difficulty": "Advanced",
+  "difficulty": "Beginner",
   "time": "10",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - Create docker compose configuration for cassandra single node",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - Connect to Cassandra Container  and run the commands",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Persistance in cassandra and how to save the data in docker volumes",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Step 4 - How to create a keyspace and a table and insert some data",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Step 5 - Cleanup the machine",
         "text": "step5.md"
-      },
-      {
-        "title": "Step 6",
-        "text": "step6.md"
       }
     ],
     "intro": {

@@ -1,1 +1,0 @@
-Cassandra Single Node container is done
