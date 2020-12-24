@@ -1,6 +1,6 @@
 {
-  "title": "React App Containerisation",
-  "description": "Create the react app and containerise and deploy with docker-compose",
+  "title": "React App Containerization",
+  "description": "Create the react app and containerize and deploy with docker-compose",
   "difficulty": "beginner",
   "time": "5-10 minutes",
   "details": {
@@ -14,7 +14,7 @@
       "title": "Step 3 - What is docker-compose.yml? How to Deploy the application?",
       "text": "step3.md"
     },{
-      "title": "Step 4 - Basic Commands for Docker Bigginers?",
+      "title": "Step 4 - Basic Commands for Docker Beginners?",
       "text": "step4.md"
     }],
     "intro": {
