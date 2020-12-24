@@ -10,6 +10,7 @@ version: "3.7"
 services:
   cassandra-one: 
     image: cassandra:3.9
+    container_name: cassandra
     ports:
       - 7000:7000
       - 7001:7001
@@ -26,12 +27,17 @@ services:
 EOF
 ```{{execute}}
 
+- Check the files available run `ls -l`{{execute}}
+- Check the file configuration created `cat docker-compose.yml`{{execute}}
 - Run the container `docker-compose up -d`{{execute}}
 
 ### What does the above commands do
 
-1. Pull the docker image from the dockerhub, as we are running for the first time, otherwise it will pick the docker image from the local docker image cache.
-2. Creates a network to run the container, meaning docker have its own network and a firewall.
+1. Creates a network to run the container, meaning docker have its own network and a firewall, Creating network "root_default" with the default driver
+2. Pull the docker image from the dockerhub, as we are running for the first time, otherwise it will pick the docker image from the local docker image cache.
 3. Then start running the cassandra
 4. Above  defined ports will be opened from the docker container to the host so that we can access it from the host machine network to docker network.
 
+
+- Check the status of the container `docker ps -a`{{execute}}
+- Check logs of the container `docker logs cassandra`{{execute}}
