@@ -18,14 +18,13 @@ We will enter into the container root user, with all cassandra related configura
 - Create a keyspace `CREATE KEYSPACE IF NOT EXISTS cycling WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };`{{execute}}
 - Use the keyspace `USE cycling;`{{execute}}
 - Update a keyspace in the cluster and change its replication strategy options `ALTER KEYSPACE system_auth WITH REPLICATION = {'class' : 'NetworkTopologyStrategy', 'dc1' : 3, 'dc2' : 2};`{{execute}}
-- Create tables
-`
+
+- Create table 
+```sh
 CREATE TABLE cycling.cyclist_alt_stats ( id UUID PRIMARY KEY, lastname text, birthday timestamp, nationality text, weight text, height text );
-
 CREATE TABLE cycling.whimsey ( id UUID PRIMARY KEY, lastname text, cyclist_teams set<text>, events list<text>, teams map<int,text> );
-
 CREATE TABLE cycling.route (race_id int, race_name text, point_id int, lat_long tuple<text, tuple<float,float>>, PRIMARY KEY (race_id, point_id));
-`{{execute}}
+```{{execute}}
 
 - Insert and Query the data in cassandra
 `

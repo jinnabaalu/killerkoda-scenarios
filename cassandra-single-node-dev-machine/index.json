@@ -1,6 +1,6 @@
 {
-  "title": "Dev Machine Cassandra Container ",
-  "description": "Running cassandra on a single node container, to understand setting up cassandra container",
+  "title": "Cassandra Container for Developer",
+  "description": "Running cassandra on a single node container, and understand a bit about cassandra",
   "difficulty": "Beginner",
   "time": "10",
   "details": {
