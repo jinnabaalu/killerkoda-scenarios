@@ -15,8 +15,11 @@ We will enter into the container root user, with all cassandra related configura
 *Cassandra Query Language - CQL*, used as a client to connect the cassandra. Let's run some cql command to create the keyspace and tables. 
 
 - Initialize the CQL Client with `cqlsh`{{execute}}
+
 - Create a keyspace `CREATE KEYSPACE IF NOT EXISTS cycling WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };`{{execute}}
+
 - Use the keyspace `USE cycling;`{{execute}}
+
 - Update a keyspace in the cluster and change its replication strategy options `ALTER KEYSPACE system_auth WITH REPLICATION = {'class' : 'NetworkTopologyStrategy', 'dc1' : 3, 'dc2' : 2};`{{execute}}
 
 - Create table 
@@ -27,7 +30,8 @@ CREATE TABLE cycling.route (race_id int, race_name text, point_id int, lat_long 
 ```{{execute}}
 
 - Insert and Query the data in cassandra
-```bash
+
+```sh
 CREATE TABLE cycling.rank_by_year_and_name ( 
   race_year int, 
   race_name text, 
@@ -51,13 +55,13 @@ INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, r
    VALUES (2014, '4th Tour of Beijing', 'Daniel MARTIN', 2);
 INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank)  
    VALUES (2014, '4th Tour of Beijing', 'Johan Esteban CHAVES', 3);
-`{{execute}}
+```{{execute}}
 
 - Use a simple SELECT query to display all data from a table.
 
-`
-SELECT * FROM cycling.cyclist_category;
-`{{execute}}
+    `
+    SELECT * FROM cycling.cyclist_category;
+    `{{execute}}
 
 - The example below illustrates how to create a query that uses category as a filter.
 `
