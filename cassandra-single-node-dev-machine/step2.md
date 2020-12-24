@@ -27,7 +27,7 @@ CREATE TABLE cycling.route (race_id int, race_name text, point_id int, lat_long 
 ```{{execute}}
 
 - Insert and Query the data in cassandra
-`
+```bash
 CREATE TABLE cycling.rank_by_year_and_name ( 
   race_year int, 
   race_name text, 
@@ -52,7 +52,9 @@ INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, r
 INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank)  
    VALUES (2014, '4th Tour of Beijing', 'Johan Esteban CHAVES', 3);
 `{{execute}}
+
 - Use a simple SELECT query to display all data from a table.
+
 `
 SELECT * FROM cycling.cyclist_category;
 `{{execute}}
