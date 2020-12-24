@@ -41,3 +41,5 @@ EOF
 
 - Check the status of the container `docker ps -a`{{execute}}
 - Check logs of the container `docker logs cassandra`{{execute}}
+
+Wait for logs to show  `Starting listening for CQL clients on /0.0.0.0:9042 (unencrypted)`, then you are ready to click on continue.
