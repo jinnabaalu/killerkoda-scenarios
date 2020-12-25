@@ -1,0 +1,3 @@
+Maintaining the persistance is also the main factor working with stateful services. When we run the container the data is saved to the default folders within the container, but not to the host machine. When we restart the container we loose the data. To overcome this issues we have to mount the data folder to the host machine. Mounting a container folder to host machine folder is possible with docker volumes. 
+
+There are three options to create the docker volume 
