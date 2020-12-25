@@ -16,58 +16,37 @@ We will enter into the container root user, with all cassandra related configura
 
 - Initialize the CQL Client with `cqlsh`{{execute}}
 
-- Create a keyspace `CREATE KEYSPACE IF NOT EXISTS cycling WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };`{{execute}}
+- Create cycling keyspace on a single node evaluation cluster: `CREATE KEYSPACE IF NOT EXISTS cycling WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'dc1' : 3, 'dc2' : 2};`{{execute}}
 
 - Use the keyspace `USE cycling;`{{execute}}
 
-- Update a keyspace in the cluster and change its replication strategy options `ALTER KEYSPACE system_auth WITH REPLICATION = {'class' : 'NetworkTopologyStrategy', 'dc1' : 3, 'dc2' : 2};`{{execute}}
+- Update a keyspace in the cluster and change its replication strategy options 
 
-- Create table 
-```sh
-CREATE TABLE cycling.cyclist_alt_stats ( id UUID PRIMARY KEY, lastname text, birthday timestamp, nationality text, weight text, height text );
-CREATE TABLE cycling.whimsey ( id UUID PRIMARY KEY, lastname text, cyclist_teams set<text>, events list<text>, teams map<int,text> );
-CREATE TABLE cycling.route (race_id int, race_name text, point_id int, lat_long tuple<text, tuple<float,float>>, PRIMARY KEY (race_id, point_id));
-```{{execute}}
+`CREATE KEYSPACE cycling
+  WITH REPLICATION = { 
+   'class' : 'SimpleStrategy', 
+   'replication_factor' : 1 
+  };`{{execute}}
 
-- Insert and Query the data in cassandra
+- Create the cyclist_name table with UUID as the primary key
 
-```sh
-CREATE TABLE cycling.rank_by_year_and_name ( 
-  race_year int, 
-  race_name text, 
-  cyclist_name text, 
-  rank int, 
-  PRIMARY KEY ((race_year, race_name), rank) );
-
-INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank) 
-   VALUES (2015, 'Tour of Japan - Stage 4 - Minami > Shinshu', 'Benjamin PRADES', 1);
-INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank) 
-   VALUES (2015, 'Tour of Japan - Stage 4 - Minami > Shinshu', 'Adam PHELAN', 2);
-INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank) 
-   VALUES (2015, 'Tour of Japan - Stage 4 - Minami > Shinshu', 'Thomas LEBAS', 3);
-INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank) 
-   VALUES (2015, 'Giro d''Italia - Stage 11 - Forli > Imola', 'Ilnur ZAKARIN', 1);
-INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank) 
-   VALUES (2015, 'Giro d''Italia - Stage 11 - Forli > Imola', 'Carlos BETANCUR', 2);
-INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank) 
-   VALUES (2014, '4th Tour of Beijing', 'Phillippe GILBERT', 1);
-INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank)  
-   VALUES (2014, '4th Tour of Beijing', 'Daniel MARTIN', 2);
-INSERT INTO cycling.rank_by_year_and_name (race_year, race_name, cyclist_name, rank)  
-   VALUES (2014, '4th Tour of Beijing', 'Johan Esteban CHAVES', 3);
-```{{execute}}
-
-- Use a simple SELECT query to display all data from a table.
-
-    `
-    SELECT * FROM cycling.cyclist_category;
-    `{{execute}}
-
-- The example below illustrates how to create a query that uses category as a filter.
 `
-SELECT * FROM cycling.cyclist_category WHERE category = 'SPRINT';
+CREATE TABLE cycling.cyclist_name ( 
+   id UUID PRIMARY KEY, 
+   lastname text, 
+   firstname text );
 `{{execute}}
-- Pick the columns to display instead of choosing all data and limit
+
+- Add IF NOT EXISTS to the command to ensure that the operation is not performed if a row with the same primary key already exists
+
 `
-SELECT category, points, lastname FROM cycling.cyclist_category LIMIT 3;
+INSERT INTO cycling.cyclist_name (id, lastname, firstname) 
+   VALUES (c4b65263-fe58-4846-83e8-f0e1c13d518f, 'RATTO', 'Rissella') 
+IF NOT EXISTS; 
+`{{execute}}
+
+- Use a simple SELECT query to display all data from a table
+
+`
+SELECT * FROM cycling.cyclist_name;
 `{{execute}}
