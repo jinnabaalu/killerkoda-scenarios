@@ -1,0 +1,42 @@
+{
+  "title": "Ansible - Automate everything possible",
+  "description": "What, Why and How, all about Ansible? | Provisioning, Configuration, Deploymentment and Infrastructure as Code Automation Tool | DevSecOps",
+  "difficulty": "Beginner",
+  "time": "10",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - What, Why and How ?",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - Connect to Cassandra Container  and run the commands",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - Persistance in cassandra and how to save the data in docker volumes",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - How to create a keyspace and a table and insert some data",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - Cleanup the machine",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
