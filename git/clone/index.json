@@ -1,0 +1,19 @@
+{
+    "title": "Clone Intro",
+    "description": "Learn how to clone a repository",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Clone a repository",
+                "text": "step1/text.md",
+                "verify": "step1/verify.sh"
+            }
+        ]
+    },
+    "backend": {
+        "imageid": "ubuntu"
+    }
+}
