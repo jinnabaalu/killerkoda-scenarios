@@ -1,11 +1,16 @@
 {
-    "title": "Clone Intro",
-    "description": "Learn how to clone a repository",
+    "title": "Git Clone",
+    "description": "Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository, and creates and checks out an initial branch that is forked from the cloned repository’s currently active branch",
     "details": {
         "intro": {
             "text": "intro.md"
         },
         "steps": [
+            {
+                "title": "Clone a repository",
+                "text": "step1/text.md",
+                "verify": "step1/verify.sh"
+            },
             {
                 "title": "Clone a repository",
                 "text": "step1/text.md",
